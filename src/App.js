@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -31,11 +32,13 @@ const App = () => {
   //   React.createElement('h2', {}, "Let's get started!"),
   //   React.createElement(Expenses, { items: expenses })
   // );
-
+  const newExpenseHandler = (newExpenseData) => {
+    console.log({...newExpenseData})
+  }
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <Expenses items={expenses} />
+     <NewExpense nSavedNewExpense={newExpenseHandler} />
+      <Expenses items={expenses} o/>
     </div>
   );
 }
