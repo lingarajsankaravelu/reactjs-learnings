@@ -4,7 +4,7 @@ import './NewExpense.css';
 
 const NewExpense = (props) => {
     const savedExpenseDataHandler =(enteredExpenseData) => {
-        props.nSavedNewExpense(enteredExpenseData)
+        props.nSavedNewExpense({...enteredExpenseData})
     }
 
     return (
